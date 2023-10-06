@@ -1,0 +1,97 @@
+body {
+	margin: 0;
+	font-family: 'Smythe', cursive;
+	color: #000;
+}
+
+header {
+	color: #fff;
+	background: url('./img/hero.png');
+	height: 166px;
+}
+
+.add-btn {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url('./img/ellipse.png');
+	background-size: 50px 50px;
+}
+
+.add-btn p {
+	color: #3c3c3c;
+	text-align: center;
+	font-family: Inter;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 200;
+	line-height: 24px;
+}
+
+header h1 {
+	font-size: 39px;
+	line-height: 24px;
+	font-style: normal;
+	font-weight: 400;
+	margin-top: 50px;
+}
+
+header p {
+	font-size: 22.422px;
+	line-height: 13.798px;
+}
+
+.main {
+	width: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	margin: 20 auto;
+	border: solid 4px #000;
+	border-radius: 16px;
+}
+
+.container {
+	margin: 0 46px;
+}
+
+.hero-img {
+	width: 100%;
+}
+
+.menu-element {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.menu-item {
+	padding: 30px 0;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 31px;
+	border-bottom: solid #d2d2d2 1px;
+}
+
+.item-title {
+	font-size: 28px;
+	line-height: 16.8px;
+}
+
+.item-ingredients {
+	font-size: 16px;
+	color: #8b8b8b;
+	line-height: 24px;
+}
+
+.item-price {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.align-right {
+	margin: auto 0 auto auto;
+}
