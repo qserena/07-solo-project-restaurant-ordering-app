@@ -1,6 +1,42 @@
 import { menuArray } from './data.js'
 
-const menuElement = document.getElementById('menu-element')
+const order = menuArray.map((item) => 0)
+const menuContainer = document.getElementById('menu-container')
+const orderContainer = document.getElementById('order-container')
+
+document.addEventListener('click', function (e) {
+	if (e.target.dataset.itemId) {
+		handleAddClick(e.target.dataset.itemId)
+	}
+})
+
+function handleAddClick(itemId) {
+	order[itemId]++
+	console.log(order)
+	renderOrder()
+}
+
+function renderOrder() {
+	orderContainer.innerHTML =
+		`
+	<div id="order-element">
+		<p class="order-header">Your order</p>
+	</div>
+	` +
+		order
+			.map((value, index) =>
+				value > 0
+					? `
+					<div class="order-row">
+						<p class="item-title">${value} ${menuArray[index].name}</p>
+						<p>remove</p>
+						<p class="align-right">$</p>
+					</div>
+					`
+					: ``
+			)
+			.join('')
+}
 
 function getMenuHtml() {
 	return menuArray
@@ -13,16 +49,13 @@ function getMenuHtml() {
 					<p class="item-ingredients">${item.ingredients.join(', ')}</p>
 					<p class="item-price">$${item.price}</p>
 				</div>
-				<div class="add-btn align-right">
+				<div class="add-btn align-right" data-item-id="${item.id}">
 					<p>+</p>
 				</div>
-				<!-- <img class="align-right" src="./img/Ellipse.png" alt="Circle icon"> -->
 			</div>
 			`
 		)
 		.join('')
 }
 
-menuElement.innerHTML = getMenuHtml()
-const test = getMenuHtml()
-console.log(test)
+menuContainer.innerHTML = getMenuHtml()

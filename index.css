@@ -96,3 +96,19 @@ header p {
 .align-right {
 	margin: auto 0 auto auto;
 }
+
+.order-header {
+	text-align: center;
+	font-size: 28px;
+	margin-top: 40px;
+}
+
+.order-row {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.order-total-price {
+	marginal: auto 0 auto auto;
+}
