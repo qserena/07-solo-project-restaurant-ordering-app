@@ -26,11 +26,6 @@ header {
 	cursor: pointer;
 }
 
-.add-btn:disabled {
-	/* background-color: #bbb; */
-	background: solid red;
-}
-
 .add-btn p {
 	color: #3c3c3c;
 	text-align: center;
@@ -231,6 +226,11 @@ header p {
 	background: #16db99;
 }
 
+.modal-btn:hover,
+.modal-btn:active {
+	cursor: pointer;
+}
+
 .confirmation-container {
 	display: flex;
 	justify-content: center;
@@ -239,10 +239,7 @@ header p {
 	color: #065f46;
 	font-size: 32px;
 	margin-top: 45px;
-
 	line-height: 16.8px;
-	/* text-align: center; */
-	/* margin: 0 auto; */
 	border-radius: 3px;
 	background: #ecfdf5;
 }
