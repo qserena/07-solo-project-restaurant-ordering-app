@@ -20,6 +20,10 @@ header {
 	background-size: 50px 50px;
 }
 
+.add-btn:hover {
+	cursor: pointer;
+}
+
 .add-btn p {
 	color: #3c3c3c;
 	text-align: center;
@@ -45,7 +49,7 @@ header p {
 
 .main {
 	width: 600px;
-	height: 1160px;
+	height: 1300px;
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
@@ -77,24 +81,42 @@ header p {
 	border-bottom: solid #d2d2d2 1px;
 }
 
-.item-title {
-	font-size: 28px;
-	line-height: 16.8px;
+.menu-item-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: start;
 }
 
-.item-ingredients {
+.menu-item-title {
+	font-size: 28px;
+	line-height: 16.8px;
+	margin-bottom: 8px;
+}
+
+.menu-item-ingredients {
 	font-size: 16px;
 	color: #8b8b8b;
 	line-height: 24px;
+	margin-top: 2px;
+	margin-bottom: 10px;
 }
 
-.item-price {
+.menu-item-price {
 	font-size: 20px;
 	line-height: 24px;
+	margin-top: 4px;
 }
 
 .align-right {
 	margin: auto 0 auto auto;
+}
+
+.order-element {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	gap: 2px;
 }
 
 .order-header {
@@ -107,8 +129,55 @@ header p {
 	display: flex;
 	justify-content: start;
 	align-items: center;
+	height: 45px;
+	margin: 0 0;
+	padding: 0 0;
 }
 
-.order-total-price {
-	marginal: auto 0 auto auto;
+.order-item-title {
+	font-size: 28px;
+	line-height: 16.8px;
+}
+
+.order-item-remove {
+	color: #bbb;
+	font-family: Verdana;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	margin-left: 12px;
+	margin-bottom: 8px;
+}
+
+.order-price {
+	margin: auto 0 auto auto;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.order-total-row {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	border-top: solid 2px #393333;
+	margin-top: 25px;
+}
+
+.order-purchase-btn {
+	color: white;
+	font-family: Verdana;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 24px;
+	display: flex;
+	width: 508px;
+	margin: 25px 0;
+	padding: 18px 175px 18px 194px;
+	justify-content: flex-end;
+	align-items: center;
+	border: none;
+	border-radius: 3px;
+	background: #16db99;
 }

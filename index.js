@@ -21,21 +21,29 @@ function renderOrder() {
 		`
 	<div id="order-element">
 		<p class="order-header">Your order</p>
-	</div>
 	` +
 		order
 			.map((value, index) =>
 				value > 0
 					? `
 					<div class="order-row">
-						<p class="item-title">${value} ${menuArray[index].name}</p>
-						<p>remove</p>
-						<p class="align-right">$</p>
+						<p class="order-item-title">${value} ${menuArray[index].name}</p>
+						<p class="order-item-remove">remove</p>
+						<p class="align-right order-price">$${value * menuArray[index].price}</p>
 					</div>
 					`
 					: ``
 			)
-			.join('')
+			.join('') +
+		`
+			<div class="order-total-row">
+				<p class="order-item-title">Total price:</p>
+				<p class="align-right order-price">$26</p>
+			</div>
+			` +
+		`<button class="order-purchase-btn">Complete order</button>
+		
+	</div>`
 }
 
 function getMenuHtml() {
@@ -44,13 +52,13 @@ function getMenuHtml() {
 			(item) => `
 			<div class="menu-item">
 				<img src="${item.image}" alt="image of ${item.name}"> 
-				<div>
-					<p class="item-title">${item.name}</p>
-					<p class="item-ingredients">${item.ingredients.join(', ')}</p>
-					<p class="item-price">$${item.price}</p>
+				<div class="menu-item-details">
+					<p class="menu-item-title">${item.name}</p>
+					<p class="menu-item-ingredients">${item.ingredients.join(', ')}</p>
+					<p class="menu-item-price">$${item.price}</p>
 				</div>
 				<div class="add-btn align-right" data-item-id="${item.id}">
-					<p>+</p>
+					<p data-item-id="${item.id}">+</p>
 				</div>
 			</div>
 			`
