@@ -3,13 +3,45 @@ import { menuArray } from './data.js'
 const order = menuArray.map((item) => 0)
 const menuContainer = document.getElementById('menu-container')
 const orderContainer = document.getElementById('order-container')
+const orderPurchaseBtn = document.getElementById('order-purchase-btn')
+const modal = document.getElementById('modal')
+const modalCloseBtn = document.getElementById('modal-close-btn')
+const paymentForm = document.getElementById('payment-form')
+const confirmationContainer = document.getElementById('confirmation-container')
+let name = ''
 
 document.addEventListener('click', function (e) {
 	if (e.target.dataset.itemId) {
 		handleAddClick(e.target.dataset.itemId)
 	} else if (e.target.dataset.orderId) {
 		handleRemoveClick(e.target.dataset.orderId)
+	} else if (e.target.id === 'order-purchase-btn') {
+		handlePurchaseClick()
 	}
+})
+
+paymentForm.addEventListener('submit', function (e) {
+	e.preventDefault()
+
+	const paymentFormData = new FormData(paymentForm)
+	name = paymentFormData.get('fullName')
+
+	modal.style.display = 'none'
+
+	let addButtons = document.getElementsByClassName('add-btn')
+	Array.from(addButtons).forEach(function (btn) {
+		btn.classList.add('disabled')
+	})
+
+	const firstName = name.includes(' ')
+		? name.substring(0, name.indexOf(' '))
+		: name
+
+	document.getElementById(
+		'confirmation-text'
+	).textContent = `Thanks, ${firstName}! Your order is on its way!`
+
+	confirmationContainer.classList.remove('hidden')
 })
 
 function handleAddClick(itemId) {
@@ -20,6 +52,17 @@ function handleAddClick(itemId) {
 function handleRemoveClick(itemId) {
 	order[itemId]--
 	renderOrder()
+}
+
+function handlePurchaseClick() {
+	modal.style.display = 'inline'
+	orderContainer.style.display = 'none'
+}
+
+function handlePayClick() {
+	modal.style.display = 'inline'
+	modal
+	orderContainer.style.display = 'none'
 }
 
 function renderOrder() {
@@ -47,7 +90,7 @@ function renderOrder() {
 				<p class="align-right order-price">$${getTotalPrice()}</p>
 			</div>
 			` +
-		`<button class="order-purchase-btn">Complete order</button>
+		`<button class="order-purchase-btn" id="order-purchase-btn">Complete order</button>
 		
 	</div>`
 }

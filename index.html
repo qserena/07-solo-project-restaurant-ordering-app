@@ -25,16 +25,38 @@
 			<section class="menu-section">
 				<div class="container menu-container" id="menu-container"></div>
 			</section>
-			<section class="order">
+			<section class="order-section">
 				<div class="container order-container" id="order-container"></div>
 			</section>
-			<section class="confirmation">
+			<section class="confirmation-section">
 				<div
-					class="container confirmation-container"
+					class="container confirmation-container hidden"
 					id="confirmation-container"
-				></div>
+				>
+					<p class="confirmation-text" id="confirmation-text"></p>
+				</div>
 			</section>
-			<section class="pay-form"></section>
+			<section class="modal" id="modal">
+				<div class="modal-inner" id="modal-inner">
+					<h2>Enter card details</h2>
+					<form class="payment-form" id="payment-form">
+						<input
+							type="text"
+							name="fullName"
+							placeholder="Enter your name"
+							required
+						/>
+						<input
+							type="number"
+							name="card-number"
+							placeholder="Enter card number"
+							required
+						/>
+						<input type="number" name="cvv" placeholder="Enter CVV" required />
+						<button type="submit" class="modal-btn" id="modal-btn">Pay</button>
+					</form>
+				</div>
+			</section>
 			<script src="index.js" type="module"></script>
 		</div>
 	</body>

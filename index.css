@@ -21,8 +21,14 @@ header {
 	background-size: 50px 50px;
 }
 
-.add-btn:hover {
+.add-btn:hover,
+.add-btn:active {
 	cursor: pointer;
+}
+
+.add-btn:disabled {
+	/* background-color: #bbb; */
+	background: solid red;
 }
 
 .add-btn p {
@@ -181,4 +187,66 @@ header p {
 	border: none;
 	border-radius: 3px;
 	background: #16db99;
+}
+
+.order-purchase-btn:hover,
+.order-purchase-btn:active {
+	cursor: pointer;
+}
+
+/* modal */
+
+.modal {
+	display: none;
+	font-family: Verdana;
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 420px;
+	width: 350px;
+	border-radius: 4px;
+	box-shadow: 0px 0px 6px 2px #666;
+	background-color: #fff;
+	color: #000;
+}
+
+.modal-inner {
+	width: 542px;
+	margin: 0 auto;
+}
+
+.payment-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
+
+.modal-btn {
+	color: #fff;
+	border-radius: 4px;
+	background: #16db99;
+}
+
+.confirmation-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 120px;
+	color: #065f46;
+	font-size: 32px;
+	margin-top: 45px;
+
+	line-height: 16.8px;
+	/* text-align: center; */
+	/* margin: 0 auto; */
+	border-radius: 3px;
+	background: #ecfdf5;
+}
+
+.hidden {
+	display: none;
 }
