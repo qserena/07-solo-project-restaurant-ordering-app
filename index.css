@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	font-family: 'Smythe', cursive;
 	color: #000;
+	user-select: none;
 }
 
 header {
