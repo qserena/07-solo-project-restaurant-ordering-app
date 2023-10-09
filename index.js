@@ -7,12 +7,18 @@ const orderContainer = document.getElementById('order-container')
 document.addEventListener('click', function (e) {
 	if (e.target.dataset.itemId) {
 		handleAddClick(e.target.dataset.itemId)
+	} else if (e.target.dataset.orderId) {
+		handleRemoveClick(e.target.dataset.orderId)
 	}
 })
 
 function handleAddClick(itemId) {
 	order[itemId]++
-	console.log(order)
+	renderOrder()
+}
+
+function handleRemoveClick(itemId) {
+	order[itemId]--
 	renderOrder()
 }
 
@@ -28,7 +34,7 @@ function renderOrder() {
 					? `
 					<div class="order-row">
 						<p class="order-item-title">${value} ${menuArray[index].name}</p>
-						<p class="order-item-remove">remove</p>
+						<p class="order-item-remove" data-order-id="${menuArray[index].id}">remove</p>
 						<p class="align-right order-price">$${value * menuArray[index].price}</p>
 					</div>
 					`
