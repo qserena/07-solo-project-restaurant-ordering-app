@@ -3,9 +3,7 @@ import { menuArray } from './data.js'
 const order = menuArray.map((item) => 0)
 const menuContainer = document.getElementById('menu-container')
 const orderContainer = document.getElementById('order-container')
-const orderPurchaseBtn = document.getElementById('order-purchase-btn')
 const modal = document.getElementById('modal')
-const modalCloseBtn = document.getElementById('modal-close-btn')
 const paymentForm = document.getElementById('payment-form')
 const confirmationContainer = document.getElementById('confirmation-container')
 let name = ''
@@ -24,7 +22,7 @@ paymentForm.addEventListener('submit', function (e) {
 	e.preventDefault()
 
 	const paymentFormData = new FormData(paymentForm)
-	name = paymentFormData.get('fullName')
+	name = paymentFormData.get('full-name')
 
 	modal.style.display = 'none'
 
@@ -56,12 +54,6 @@ function handleRemoveClick(itemId) {
 
 function handlePurchaseClick() {
 	modal.style.display = 'inline'
-	orderContainer.style.display = 'none'
-}
-
-function handlePayClick() {
-	modal.style.display = 'inline'
-	modal
 	orderContainer.style.display = 'none'
 }
 

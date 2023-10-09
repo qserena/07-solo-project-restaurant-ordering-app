@@ -68,6 +68,8 @@ header p {
 	width: 100%;
 }
 
+/* menu */
+
 .menu-element {
 	display: flex;
 	flex-direction: column;
@@ -113,6 +115,8 @@ header p {
 .align-right {
 	margin: auto 0 auto auto;
 }
+
+/* order */
 
 .order-element {
 	display: flex;
@@ -200,8 +204,8 @@ header p {
 	top: 0;
 	bottom: 0;
 	margin: auto;
-	height: 420px;
-	width: 350px;
+	width: 524px;
+	height: 542px;
 	border-radius: 4px;
 	box-shadow: 0px 0px 6px 2px #666;
 	background-color: #fff;
@@ -209,8 +213,14 @@ header p {
 }
 
 .modal-inner {
-	width: 542px;
+	text-align: center;
 	margin: 0 auto;
+}
+
+.modal-inner h2 {
+	margin-top: 47px;
+	font-size: 24px;
+	line-height: 31px;
 }
 
 .payment-form {
@@ -220,10 +230,32 @@ header p {
 	align-items: center;
 }
 
+input,
 .modal-btn {
-	color: #fff;
+	height: 40px;
+	width: 450px;
+	padding: 4px 16px 10px 16px;
+	margin: 10px 20px;
 	border-radius: 4px;
+	flex-shrink: 0;
+}
+
+input {
+	border: 1px solid #757575;
+}
+
+.modal-btn {
+	height: 50px;
+	width: 476px;
+	margin-top: 30px;
+	color: #fff;
 	background: #16db99;
+	color: var(--white, #fff);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 31px;
+	border: none;
 }
 
 .modal-btn:hover,
