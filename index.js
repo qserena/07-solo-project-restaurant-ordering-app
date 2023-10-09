@@ -38,12 +38,20 @@ function renderOrder() {
 		`
 			<div class="order-total-row">
 				<p class="order-item-title">Total price:</p>
-				<p class="align-right order-price">$26</p>
+				<p class="align-right order-price">$${getTotalPrice()}</p>
 			</div>
 			` +
 		`<button class="order-purchase-btn">Complete order</button>
 		
 	</div>`
+}
+
+function getTotalPrice() {
+	let sum = 0
+	order.forEach(function (value, index) {
+		sum += value * menuArray[index].price
+	})
+	return sum
 }
 
 function getMenuHtml() {
