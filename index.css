@@ -213,12 +213,15 @@ header p {
 }
 
 .modal-inner {
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 	margin: 0 auto;
 }
 
 .modal-inner h2 {
-	margin-top: 47px;
+	margin-top: 46px;
+	margin-bottom: 46px;
 	font-size: 24px;
 	line-height: 31px;
 }
@@ -232,20 +235,20 @@ header p {
 
 input,
 .modal-btn {
-	height: 40px;
-	width: 450px;
 	padding: 4px 16px 10px 16px;
-	margin: 10px 20px;
+	margin: 12px 20px;
 	border-radius: 4px;
 	flex-shrink: 0;
 }
 
 input {
+	width: 442px;
+	height: 55px;
 	border: 1px solid #757575;
 }
 
 .modal-btn {
-	height: 50px;
+	height: 71px;
 	width: 476px;
 	margin-top: 30px;
 	color: #fff;
