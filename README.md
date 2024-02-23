@@ -1,21 +1,18 @@
-# co72e499baf5f48346e5975cf
+# Tom's Diner - A Mobile Ordering app
 
-Quick start:
+## Description
+A Mobile Ordering app in which you can order Pizza, Hamburgers and Beer. The app sums up the Total Price and shows an reality-like popup form where you could submit your name and credit card information. After submit the text "Thanks, Tom! Your order is on its way!" is displayed.
 
-```
-$ npm install
-$ npm start
-````
+<br/>
+<img src="toms-diner.png" alt="Screenshot." width="400px"/>
 
-Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
+## Technologies
+- HTML
+- CSS
+- JavaScript
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## Live link
+The app is deployed here:
+[https://toms-diner.netlify.app](https://toms-diner.netlify.app/)
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
-
-Happy Coding!
+Please feel free to visit and click around!
